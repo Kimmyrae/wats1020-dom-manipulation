@@ -19,6 +19,11 @@ $( document ).ready(function() {
     // TODO: Create a function to listen for clicks on the "login" button.
     //      1. When a user clicks the "login" button, hide the login
     //          form elements on the page.
+	$('#login-form a.btn').on('click', function(){
+    $('#login-form').hide();
+    $('.user-info').fadeIn();
+});
+
     //      2. Fill the user's first and last name into `div.user-info`.
     //      (NOTE: You do not have to perform any validation on the data as
     //          a base requirement.)
