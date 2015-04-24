@@ -4,7 +4,7 @@
 //////////////////////////////////////////////////
 
 $( document ).ready(function() {
-    var userInfo = {
+	var userInfo = {
         firstName: 'Jane',
         lastName: 'Doe'
     };
@@ -12,28 +12,21 @@ $( document ).ready(function() {
         great: 0,
         greatest: 0,
         total: 0
-    };
+ };
     // Place all your Javascript code inside this "document ready" function so
     // it does not run until the DOM is ready for Javascript manipulation.
 
     // TODO: Create a function to listen for clicks on the "login" button.
     //      1. When a user clicks the "login" button, hide the login
     //          form elements on the page.
-	$('#login-form a.btn').on('click', function(){
-    $('#login-form').hide();
-    $('.user-info').fadeIn();
+$('#login-form a').on('click', function(){
+$('#login-form').hide();
+$('.user-info').fadeIn();
 });
 
     //      2. Fill the user's first and last name into `div.user-info`.
     //      (NOTE: You do not have to perform any validation on the data as
     //          a base requirement.)
-$('#first_name').keyup(function(){
-   $('#full_name').val(this.value+' '+$('#last_name').val());
-});
-
-$('#last_name').keyup(function(){
-   $('#full_name').val($('#first_name').val()+' '+this.value);
-});
 
 
     // TODO: Create a function to listen for clicks on all the "View Details"
@@ -53,7 +46,7 @@ $(container).find('.details').each(function(index, el){
         targetElement.innerText = "View Details";
     }
 else {
-    if$(el).fadeIn();
+    $(el).fadeIn();
     targetElement.innerText = "Hide Details";
     
 }
@@ -76,4 +69,5 @@ else {
     //      4. Determine the respective percentages (out of 100) for each progress bar.
     //      5. Modify the `width` attribute on each progress bar to set the updated percentage.
 
+});
 });
