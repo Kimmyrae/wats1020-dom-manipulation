@@ -20,9 +20,10 @@ $( document ).ready(function() {
     //      1. When a user clicks the "login" button, hide the login
     //          form elements on the page.
 $('#login-form a').on('click', function(){
-		var userFullName = userInfo.firstName + userInfo.lastName;
-		$('#login-form').hide();
-		$('.user-info').fadeIn();
+			var userFullName = userInfo.firstName + userInfo.lastName;
+			
+			$('#login-form').hide();
+			$('.user-info').html(userFullName).fadeIn();
 });
 
     //      2. Fill the user's first and last name into `div.user-info`.
