@@ -13,22 +13,14 @@ $( document ).ready(function() {
         greatest: 0,
         total: 0
  };
-    // Place all your Javascript code inside this "document ready" function so
-    // it does not run until the DOM is ready for Javascript manipulation.
-
-    // TODO: Create a function to listen for clicks on the "login" button.
-    //      1. When a user clicks the "login" button, hide the login
-    //          form elements on the page.
+   
 $('#login-form a').on('click', function(){
-			var userFullName = userInfo.firstName + userInfo.lastName;
-			
-			$('#login-form').hide();
-			$('.user-info').html(userFullName).fadeIn();
+	var userFullName = "Welcome, "+ userInfo.firstName + " "+ userInfo.lastName;			
+	$('#login-form').hide();
+	$('.user-info').html(userFullName).fadeIn();
 });
 
-    //      2. Fill the user's first and last name into `div.user-info`.
-    //      (NOTE: You do not have to perform any validation on the data as
-    //          a base requirement.)
+  
 
     // TODO: Create a function to listen for clicks on all the "View Details"
     // buttons so that when a user clicks a "View Details" button they see
