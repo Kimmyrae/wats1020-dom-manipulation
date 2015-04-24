@@ -27,6 +27,13 @@ $( document ).ready(function() {
     //      2. Fill the user's first and last name into `div.user-info`.
     //      (NOTE: You do not have to perform any validation on the data as
     //          a base requirement.)
+$('#first_name').keyup(function(){
+   $('#full_name').val(this.value+' '+$('#last_name').val());
+});
+
+$('#last_name').keyup(function(){
+   $('#full_name').val($('#first_name').val()+' '+this.value);
+});
 
 
     // TODO: Create a function to listen for clicks on all the "View Details"
@@ -34,6 +41,26 @@ $( document ).ready(function() {
     // the content contained in the elements with the class "details" in the
     // proper part of the screen.
     //      1. When user clicks a "view details" button, find the parent of that element.
+	
+
+$('#view-details').on('click', function(event){
+    console.log(event);
+    var targetElement = eventTarget;
+    var container = targetElement.parentElement.parentElement;
+$(container).find('.details').each(function(index, el){
+    if($(el).is(':visible')){
+        $(el).fadeout();
+        targetElement.innerText = "View Details";
+    }
+else {
+    if$(el).fadeIn();
+    targetElement.innerText = "Hide Details";
+    
+}
+
+
+});
+
     //      2. Within that parent, find all the elements that have the class `details`.
     //      3. Toggle visibility of all the elements within that parent with the class `details`.
     //      4. Change the text of the "view details" button to read "hide details" so the user
