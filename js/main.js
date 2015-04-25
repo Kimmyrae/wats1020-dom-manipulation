@@ -14,6 +14,7 @@ $( document ).ready(function() {
         total: 0
  };
    
+	// add welcome message when user logs in
 $('#login-form a').on('click', function(){
 	var userFullName = "Welcome, "+ userInfo.firstName + " "+ userInfo.lastName;			
 	$('#login-form').hide();
