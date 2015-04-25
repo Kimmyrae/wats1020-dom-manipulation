@@ -22,11 +22,6 @@ $('#login-form a').on('click', function(){
 
   
 
-    // TODO: Create a function to listen for clicks on all the "View Details"
-    // buttons so that when a user clicks a "View Details" button they see
-    // the content contained in the elements with the class "details" in the
-    // proper part of the screen.
-    //      1. When user clicks a "view details" button, find the parent of that element.
 	$('a.view-details').on('click', function(event) {
 		
 		// Toggle content
